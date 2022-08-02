@@ -1,0 +1,34 @@
+.navigation {
+  min-width: 15%;
+  min-height: 100vh;
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #15CD69;
+  gap: 10px;
+  list-style: none;
+  padding: 10px;
+}
+.navigation__item {
+  text-decoration: none;
+  color: white;
+  transition: all ease .2s;
+  display: block;
+}
+.navigation__item:hover {
+  color: rgb(168, 168, 168);
+}
+.navigation__item_last {
+  text-decoration: none;
+  color: white;
+  transition: all ease .2s;
+  margin-top: 15px;
+  display: block;
+}
+.navigation__item_last:hover {
+  color: rgb(168, 168, 168);
+}
+.active {
+  color:gold;
+  text-decoration: none;
+}

@@ -1,0 +1,36 @@
+.profile__posts_container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    color: #646464;
+}
+.large_text {
+    font-size: 1.3rem;
+}
+.profile__post_elements {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 15px;
+}
+.profile__post_textarea {
+    width: 99.2%;
+    height: 50px;
+    background-color: #C6CAC9;
+}
+.profile__send_button {
+    font-size: 1.2rem;
+    margin-top: 15px;
+    background-color: #15CD69;
+    color: white;
+    border: 0;
+    width: 100px;
+    height: 30px;
+    transition: all ease .3s;
+}
+.profile__send_button:hover {
+    cursor: pointer;
+    background-color: #13a856;
+}
