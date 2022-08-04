@@ -13,13 +13,17 @@ function App(props) {
       <main className='main'>
       <Navigation/>
       <Routes>
-        <Route path='/profile' element={<Profile postsData={props.postsData} addPost={props.addPost} />} />
-        <Route path='/messages' element={<Dialogs dialogsData={props.dialogsData} messagesData={props.messagesData} />} />
+        <Route path='/profile' element={<Profile 
+          profile={props.state.profile} 
+          addPost={props.addPost}  
+          onChangePost={props.onChangePost} 
+        />} />
+        <Route path='/messages' element={<Dialogs 
+          dialogs={props.state.dialogs}
+        />} />
       </Routes>
       </main>
     </div>
-    
-    
   );
 }
 
