@@ -7,7 +7,6 @@ import Profile from './components/Profile/Profile';
 
 function App(props) {
   return (
-    
     <div className='wrapper'>
       <Header/>
       <main className='main'>
@@ -15,8 +14,7 @@ function App(props) {
       <Routes>
         <Route path='/profile' element={<Profile 
           profile={props.state.profile} 
-          addPost={props.addPost}  
-          onChangePost={props.onChangePost} 
+          dispatch={props.dispatch}
         />} />
         <Route path='/messages' element={<Dialogs 
           dialogs={props.state.dialogs}
@@ -26,5 +24,4 @@ function App(props) {
     </div>
   );
 }
-
 export default App;

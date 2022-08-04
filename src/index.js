@@ -13,8 +13,7 @@ export const rerender = (store) => {
       <BrowserRouter>
         <App 
           state={store._state}
-          addPost={store.addPost.bind(store)} 
-          onChangePost={store.onChangePost.bind(store)} 
+          dispatch={store.dispatch.bind(store)}
         />
       </BrowserRouter>
     </React.StrictMode>

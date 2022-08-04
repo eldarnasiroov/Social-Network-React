@@ -7,11 +7,11 @@ const MyPosts = (props) => {
     const newPostElement = React.createRef();
 
     const addPost = () => {
-        props.addPost(props.profile.postValue);
+        props.dispatch({ type: 'ADD-POST' });
     }
 
     const onPostChange = () => {
-        props.onChangePost(newPostElement.current.value);
+        props.dispatch({ type: 'CHANGE-POST-TEXT', newText: newPostElement.current.value })
     }
     return(
         <div className={classes.profile__posts_container}>
