@@ -13,7 +13,7 @@ const ProfileInfo = () => {
           <ul className={classes.profile__info_list}>
             <li>Date of birth: 8 December</li>
             <li>City: Baku</li>
-            <li>Education: Ukraine University of Nazism</li>
+            <li>Education: Ukraine University of Liquid People</li>
             <li>Website: https://protein.com</li>
           </ul>
         </div>

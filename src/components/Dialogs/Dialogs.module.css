@@ -1,7 +1,10 @@
-.dialogs {
+.dialogs__container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    /* height: 300px; */
     background-color: violet;
+}
+.dialogs {
     display: flex;
 }
 .dialogs__list {
