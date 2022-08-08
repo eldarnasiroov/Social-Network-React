@@ -1,7 +1,14 @@
 const ADD_POST = "ADD-POST";
 const CHANGE_POST_TEXT = "CHANGE-POST-TEXT";
 
- const profileReducer = (state, action) => {
+const initialState = {
+  postsData: [
+    {id: 1, message: 'Helloggg'}
+  ],
+  postValue: ''
+}
+
+ const profileReducer = (state = initialState, action) => {
     switch(action.type) {
         case ADD_POST:
           const id = state.postsData[state.postsData.length - 1].id + 1;

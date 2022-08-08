@@ -4,10 +4,10 @@ import dialogsReducer from "./dialogs-reducer";
 
 
 const reducers = combineReducers({
-    profileReducer,
-    dialogsReducer
+    profile: profileReducer,
+    dialogs: dialogsReducer
 });
 
-const store = createStore();
+const store = createStore(reducers);
 
 export default store;

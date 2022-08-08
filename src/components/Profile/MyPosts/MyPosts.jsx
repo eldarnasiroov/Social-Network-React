@@ -5,22 +5,29 @@ import { addPostActionCreator, postChangeActionCreator } from "../../../Redux/pr
 
 
 const MyPosts = (props) => {
-    const postsElements = props.profile.postsData.map(elem => <Post message={elem.message} />)
+    const postsElements = props.postsData.map(elem => <Post message={elem.message} />)
     const newPostElement = React.createRef();
 
-    const addPost = () => {
-        props.dispatch(addPostActionCreator());
-    }
+    // const addPost = () => {
+    //     props.dispatch(addPostActionCreator());
+    // }
 
+    // const onPostChange = () => {
+    //     props.dispatch(postChangeActionCreator(newPostElement.current.value));
+    // }
+    const onAddPost = () => props.addPost();
     const onPostChange = () => {
-        props.dispatch(postChangeActionCreator(newPostElement.current.value));
-    }
+        console.log(props.postValue);
+        props.postChange(newPostElement.current.value)
+    };
+
+
     return(
         <div className={classes.profile__posts_container}>
             <h3 className={classes.large_text}>My posts</h3>
             <div className={classes.profile__post_elements}>
-                <textarea onChange={onPostChange} ref={newPostElement} placeholder="your news..." className={classes.profile__post_textarea} value={props.profile.postValue} />
-                <button onClick={addPost} className={classes.profile__send_button}>Send</button>
+                <textarea onChange={onPostChange} ref={newPostElement} placeholder="your news..." className={classes.profile__post_textarea} value={props.postValue} />
+                <button onClick={onAddPost} className={classes.profile__send_button}>Send</button>
             </div>
             {postsElements}
         </div>
