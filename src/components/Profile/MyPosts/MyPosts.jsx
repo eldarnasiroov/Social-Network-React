@@ -7,17 +7,9 @@ import { addPostActionCreator, postChangeActionCreator } from "../../../Redux/pr
 const MyPosts = (props) => {
     const postsElements = props.postsData.map(elem => <Post message={elem.message} />)
     const newPostElement = React.createRef();
-
-    // const addPost = () => {
-    //     props.dispatch(addPostActionCreator());
-    // }
-
-    // const onPostChange = () => {
-    //     props.dispatch(postChangeActionCreator(newPostElement.current.value));
-    // }
+    
     const onAddPost = () => props.addPost();
     const onPostChange = () => {
-        console.log(props.postValue);
         props.postChange(newPostElement.current.value)
     };
 

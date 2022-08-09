@@ -13,10 +13,8 @@ function App(props) {
       <Navigation/>
       <Routes>
         <Route path='/profile' element={<Profile 
-          store={props.store}
         />} />
         <Route path='/messages' element={<DialogsContainer
-          store={props.store}
         />} />
       </Routes>
       </main>

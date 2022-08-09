@@ -13,8 +13,8 @@ const Dialogs = (props) => {
        return props.sendMessage();
     }
 
-    const dialogsElements = props.dialogsData.map(elem => <Dialog id={elem.id} senderName={elem.name}/>);
-    const mesagesElements = props.messagesData.map(elem => <Message message={elem.message} />);
+    const dialogsElements = props.dialogs.dialogsData.map(elem => <Dialog id={elem.id} senderName={elem.name}/>);
+    const mesagesElements = props.dialogs.messagesData.map(elem => <Message message={elem.message} />);
 
     return(
         <div className={classes.dialogs__container}>
@@ -27,7 +27,7 @@ const Dialogs = (props) => {
             </ul>
         </div>
             <div className={classes.create__message_container}>
-                <input value={props.messageTextValue} onChange={onMessageChange} ref={newChangeInMessage} placeholder="your message..." type="text" />
+                <input value={props.dialogs.messageTextValue} onChange={onMessageChange} ref={newChangeInMessage} placeholder="your message..." type="text" />
                 <button onClick={onSendMessage}>Send</button>
             </div>
         </div>
